@@ -1,0 +1,51 @@
+.titlefont{
+    font-size: large;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+.centring{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.playerdetails{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+.startButton{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.mt{
+    margin-top: 8px;
+}
+.mr{
+    margin-right: 8px;
+}
+
+.carddetails{
+    padding: 10px;
+    font-weight: 500;
+}
+
+.selectedCard{
+    background-color: rgb(226, 226, 226);
+}
+
+
+.aligins{
+    display: flex;
+    align-items: center;
+}
+
+.aliginsright{
+    display: flex;
+    justify-content: flex-end;
+}

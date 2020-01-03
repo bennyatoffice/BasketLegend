@@ -1,0 +1,36 @@
+<div class="startButton">
+    <div class="playerdetails">
+        <div class="centring">
+            <label for="" class="titlefont">Players</label>
+        </div>
+
+        <input [(ngModel)]="playername" class="form-control" type="text" name="" id="" placeholder="Player Name">
+        <div *ngIf="members.length">
+            <div class="card carddetails mt" *ngFor="let member of members; let i = index">
+                <div class="row">
+                    <div class="col-md-10 aligins">
+                        <label>{{i+1}}.  {{member}}</label>
+                    </div>
+                    <div class="col-md-2">
+                        <input class="btn btn-danger btn-sm" type="button" value="X" (click)="removePlayer(i)">
+                    </div>
+                </div>
+                <div class="cardlayour">
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+            <div class="row mt">
+                <div class="col-md-6">
+                    <input class="btn btn-primary form-control" type="button" value="Add Player" (click)="addPlayer()">
+                    <!-- <button class="btn btn-primary form-control" (click)="addPlayer()">Add Player</button> -->
+                </div>
+                <div class="col-md-6">
+                    <input class="btn btn-primary form-control" type="button" value="Done" (click)="done()">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

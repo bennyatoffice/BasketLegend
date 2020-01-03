@@ -1,0 +1,43 @@
+<div class="startButton">
+    <div class="playerdetails">
+        <div class="centring">
+            <label for="" class="titlefont">Scoreboard</label>
+        </div>
+        <div class="centring">
+            <label for="" class="">Round: {{round}}</label>
+        </div>
+
+        <div *ngIf="members.length">
+            <div class="card carddetails mt" *ngFor="let member of members; let i = index" (click)="selectedplayer(i)" [ngClass]="{'selectedCard':i == _selectedplayer}">
+                <div class="row">
+                    <div class="col-md-9 aligins">
+                        <label>{{i+1}}. {{member.name|uppercase}}</label>
+                    </div>
+                    <div class="col-md-3 aliginsright">
+                        <label class="mr">{{member.score}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+            <div class="row mt">
+                <div class="col-md-4">
+                    <input class="btn btn-primary form-control" type="button" value="+1" (click)="plus1()">
+                </div>
+                <div class="col-md-4">
+                    <input class="btn btn-primary form-control" type="button" value="+2" (click)="plus2()">
+                </div>
+                <div class="col-md-4">
+                    <input class="btn btn-primary form-control" type="button" value="+1000" (click)="Won()">
+                </div>
+            </div>
+        </div>
+        <div class="row mt">
+            <div class="col-md-12">
+                <input class="btn btn-primary form-control" type="button" value="Next Round" (click)="nextround()">
+            </div>
+        </div>
+    </div>
+</div>
