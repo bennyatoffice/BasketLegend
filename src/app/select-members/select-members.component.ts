@@ -27,6 +27,10 @@ export class SelectMembersComponent implements OnInit {
     this.members.splice(index, 1);
   }
 
+  aitrichdevs(){
+    this.members = ['Prashob','Anish','Jithin','Nibil','Althaf','Ameen','Benny'];
+  }
+
   done() {
     if(this.members.length>1){
       this.data.changeMessage(this.members);
